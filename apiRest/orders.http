@@ -1,0 +1,38 @@
+# Consultas de usuarios
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6Im5pbHRvbi5hLmp1bmlvckBob3RtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzAzMTk1NDIxfQ.b7iGMk4rrL5mJUbRRFCFasEc63b3aUd_zLW5fGfUAE4
+
+
+
+# Operações de pedidos
+
+POST http://localhost:3003/orders/create
+Content-Type: application/json
+ Authorization: {{token}}
+
+{
+    "client_name": "Nilton",
+    "street": "General candido Rondon",
+    "zipCode": "84070020",
+    "number": "123",
+    "state": "PR",
+    "city": "Ponta Grossa",
+    "neighborhood": "Nova Russia",
+    "status": "PENDING"
+}
+
+####
+
+PUT http://localhost:3003/orders/update/status/1
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+     "status": "IN_PROGRESS"
+}
+
+####
+
+GET http://localhost:3003/orders 
+Content-Type: application/json
+Authorization: {{token}}

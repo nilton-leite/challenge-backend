@@ -1,0 +1,7 @@
+# Consultas de usuarios
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6Im5pbHRvbi5hLmp1bmlvckBob3RtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzAzMTk1NDIxfQ.b7iGMk4rrL5mJUbRRFCFasEc63b3aUd_zLW5fGfUAE4
+
+GET http://localhost:3003/users/1 
+Content-Type: application/json
+Authorization: {{token}}

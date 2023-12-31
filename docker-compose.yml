@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: delliv
+      POSTGRES_USER: user-delliv
+      POSTGRES_DB: delliv-db
+    ports:
+      - 5432:5432
+  # app:
+  #   build:
+  #       context: ./
+  #       dockerfile: Dockerfile
+  #   working_dir: /usr/src/challenge-delliv-api
+  #   container_name: challenge-delliv-api
+  #   restart: unless-stopped
+  #   env_file: ./.env
+  #   environment:
+  #       - PORT=3003
+  #   stdin_open: true
+  #   tty: true
